@@ -18,6 +18,7 @@ class CreateProject extends Component {
     e.preventDefault();
     // console.log(this.state);
     this.props.createProject(this.state)
+    this.props.history.push('/');
   }
   render() {
     return (
@@ -27,13 +28,14 @@ class CreateProject extends Component {
             Create new project
           </h5>
           <div className="input-field">
-            <label htmlFor="title">Title</label>
             <input type="text" id="title" onChange={this.handleChange}/>
+            <label htmlFor="title">Title</label>
           </div> 
 
           <div className="input-field">
-          <label htmlFor="content">Project Content</label>
+          
            <textarea id="content" className="materialize-text"   onChange={this.handleChange}></textarea> 
+           <label htmlFor="content">Project Content</label>
 
           </div> <button className="btn pink lighten-1 z-depth-0">Create</button>
           <div className="input-field">
